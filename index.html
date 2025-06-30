@@ -119,9 +119,8 @@
         const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
         if (targetSection) {
-          const headerHeight = document.querySelector('header').getBoundingClientRect().height;
           window.scrollTo({
-            top: targetSection.offsetTop - headerHeight,
+            top: targetSection.offsetTop,
             behavior: 'smooth'
           });
         }
